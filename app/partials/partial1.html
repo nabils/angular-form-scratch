@@ -1,0 +1,44 @@
+<div class="container">
+    <form role="form" name="myForm" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': myForm.firstName.$invalid }">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="firstName" ng-model="form.firstName" ng-class="{ 'dirty': myForm.firstName.$dirty }" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': myForm.lastName.$invalid }">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" ng-model="form.lastName" ng-class="{ 'dirty': myForm.lastName.$dirty }" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': myForm.dob.$invalid }">
+            <label for="dob">Date of Birth</label>
+            <input type="text" class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': myForm.nationalities.$invalid }">
+            <label for="nationalities">Nationalities</label>
+            <select ui-select2 multiple class="form-control" name="nationalities" id="nationalities" ng-model="form.nationalities" ng-class="{ 'dirty': myForm.nationalities.$dirty }" required>
+                <optgroup label="Europe">
+                    <option>British</option>
+                    <option>French</option>
+                    <option>German</option>
+                </optgroup>
+                <optgroup label="Rest of World">
+                    <option>American</option>
+                    <option>Russian</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': myForm.favoriteColour.$invalid }">
+            <label for="favoriteColour">Favourite Colour</label>
+            <select class="form-control" name="favoriteColour" id="favoriteColour" ng-model="form.favoriteColour" ng-class="{ 'dirty': myForm.favoriteColour.$dirty }" required>
+                <option value=""></option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Orange">Orange</option>
+            </select>
+        </div>
+
+        <button type="submit" ng-disabled="!myForm.$valid" class="btn btn-default pull-right">Submit</button>
+    </form>
+</div>
+
