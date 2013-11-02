@@ -2,24 +2,20 @@
     <form role="form" name="myForm" novalidate>
         <div class="form-group" ng-class="{ 'has-error': myForm.firstName.$invalid }">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" name="firstName" id="firstName" ng-model="form.firstName" ng-class="{ 'dirty': myForm.firstName.$dirty }" required>
+            <input type="text" class="form-control" name="firstName" id="firstName" ng-model="form.firstName" required>
         </div>
         <div class="form-group" ng-class="{ 'has-error': myForm.lastName.$invalid }">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" name="lastName" id="lastName" ng-model="form.lastName" ng-class="{ 'dirty': myForm.lastName.$dirty }" required>
+            <input type="text" class="form-control" name="lastName" id="lastName" ng-model="form.lastName" required>
         </div>
-        <!--<div class="form-group" ng-class="{ 'has-error': myForm.dob.$invalid }">-->
-            <!--<label for="dob">Date of Birth</label>-->
-            <!--<input type="text" class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>-->
-        <!--</div>-->
         <div class="form-group" ng-class="{ 'has-error': myForm.dob.$invalid }">
             <label for="dob">Date of Birth</label>
-            <input type="text" ui-mask="'99-99-9999'" valid-date class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>
+            <input type="text" ui-mask="'99-99-9999'" valid-date class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" required>
         </div>
 
         <div class="form-group" ng-class="{ 'has-error': myForm.nationalities.$invalid }">
             <label for="nationalities">Nationalities</label>
-            <select ui-select2 multiple class="form-control" name="nationalities" id="nationalities" ng-model="form.nationalities" ng-class="{ 'dirty': myForm.nationalities.$dirty }" required>
+            <select ui-select2 multiple class="form-control" name="nationalities" id="nationalities" ng-model="form.nationalities" required>
                 <optgroup label="Europe">
                     <option>British</option>
                     <option>French</option>
@@ -34,7 +30,7 @@
 
         <div class="form-group" ng-class="{ 'has-error': myForm.favouriteThings.$invalid }">
             <label for="favouriteThings">Favourite Things</label>
-            <list-picker name="favouriteThings" id="favouriteThings" ng-model="form.favouriteThings" selected-items="form.favouriteThings" ng-class="{ 'dirty': myForm.favouriteThings.$dirty }" is-required="'true'"></list-picker>
+            <list-picker name="favouriteThings" id="favouriteThings" ng-model="form.favouriteThings" selected-items="form.favouriteThings" is-required="'true'"></list-picker>
         </div>
 
 

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddc119de-914e-4ecf-8ab6-bd92c1f6260f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/angular-strap/angular-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/angular-strap/angular-position.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/angular-strap/bootstrap-datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/angular-strap/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/template/listpicker.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/directives.js" afterPath="$PROJECT_DIR$/app/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/template/listpicker.html" afterPath="$PROJECT_DIR$/app/template/listpicker.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/partial1.html" afterPath="$PROJECT_DIR$/app/partials/partial1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular-seed.iws" />
@@ -46,14 +37,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listpicker.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="listpicker.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/template/listpicker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="468" selection-end="468" vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="636">
+            <state line="12" column="6" selection-start="470" selection-end="470" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
               <folding>
                 <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1383397804000" expanded="true" signature="60:461" placeholder="..." />
+                <marker date="1383400599000" expanded="true" signature="63:463" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -71,7 +62,7 @@
       <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/bootstrap/dist/css/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1885" column="28" selection-start="30343" selection-end="30369" vertical-scroll-proportion="-11.88" vertical-offset="27978" max-vertical-offset="102150">
+            <state line="1925" column="28" selection-start="31195" selection-end="31195" vertical-scroll-proportion="-15.48" vertical-offset="28488" max-vertical-offset="102150">
               <folding />
             </state>
           </provider>
@@ -80,16 +71,16 @@
       <file leaf-file-name="partial1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/partial1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="44" selection-start="2061" selection-end="2061" vertical-scroll-proportion="-5.7755103" vertical-offset="152" max-vertical-offset="750">
+            <state line="15" column="90" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-4.591837" vertical-offset="0" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="750">
+            <state line="21" column="19" selection-start="258" selection-end="258" vertical-scroll-proportion="0.36363637" vertical-offset="75" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -123,10 +114,10 @@
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/app/partials/partial1.html" />
-        <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/js/directives.js" />
+        <option value="$PROJECT_DIR$/app/partials/partial1.html" />
         <option value="$PROJECT_DIR$/app/template/listpicker.html" />
+        <option value="$PROJECT_DIR$/app/css/app.css" />
       </list>
     </option>
   </component>
@@ -506,6 +497,11 @@
       <created>1382735667204</created>
       <updated>1382735667204</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added listpicker">
+      <created>1383398767478</created>
+      <updated>1383398767478</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -539,6 +535,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Added listpicker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added listpicker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -624,20 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/bootstrap/dist/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1885" column="28" selection-start="30343" selection-end="30369" vertical-scroll-proportion="-11.88" vertical-offset="27978" max-vertical-offset="102150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="45" selection-start="2723" selection-end="2769" vertical-scroll-proportion="-6.9411764" vertical-offset="936" max-vertical-offset="1575">
@@ -654,19 +638,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/partial1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="44" selection-start="2061" selection-end="2061" vertical-scroll-proportion="-5.7755103" vertical-offset="152" max-vertical-offset="750">
+        <state line="15" column="90" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-4.591837" vertical-offset="0" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/template/listpicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="468" selection-end="468" vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="636">
+        <state line="12" column="6" selection-start="470" selection-end="470" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
           <folding>
             <element signature="n#style#0;n#li#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#li#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1383397804000" expanded="true" signature="60:461" placeholder="..." />
+            <marker date="1383400599000" expanded="true" signature="63:463" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1925" column="28" selection-start="31195" selection-end="31195" vertical-scroll-proportion="-15.48" vertical-offset="28488" max-vertical-offset="102150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="19" selection-start="258" selection-end="258" vertical-scroll-proportion="0.36363637" vertical-offset="75" max-vertical-offset="750">
+          <folding />
         </state>
       </provider>
     </entry>
