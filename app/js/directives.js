@@ -9,48 +9,92 @@ angular.module('myApp.directives', []).
       elm.text(version);
     };
   }]);
-//
-//
-//app.directive("controlGroup", function() {
-//    return {
-//        template:
-//            ' <div class="form-group" ng-class="{ \'has-error\': isError }">\
-//                <label for="{{for}}">{{label}}</label>\
-//                <div class="controls" ng-transclude></div>\
-//            </div>',
-//        replace: true,
-//        transclude: true,
-//        require: "^form", // Tells Angular the control-group must be within a form
-//
-//        scope: {
-//            label: "@" // Gets the string contents of the `label` attribute.
-//        },
-//
-//        link: function (scope, element, formController) {
-//            // The <label> should have a `for` attribute that links it to the input.
-//            // Get the `id` attribute from the input element
-//            // and add it to the scope so our template can access it.
-//            var id = element.find(":input").attr("id");
-//            scope.for = id;
-//
-//            // Get the `name` attribute of the input
-//            var inputName = element.find(":input").attr("name");
-//            // Build the scope expression that contains the validation status.
-//            // e.g. "form.example.$invalid"
-//            var errorExpression = [formController.$name, inputName, "$invalid"].join(".");
-//            // Watch the parent scope, because current scope is isolated.
-//            scope.$parent.$watch(errorExpression, function(isError) {
-//                scope.isError = isError;
-//            });
-//        }
-//    };
-//});
 
-app.directive("select2", function() {
 
+
+
+angular.module('myApp.directives', []).
+    directive('blah', function blahValidator() {
     return {
-        link: function (scope, element) {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function(scope, elm, attr, ctrl) {
 
+            var validator = function(value) {
+                if (ctrl.$viewValue == "blah") {
+                    ctrl.$setValidity('blah', false);
+                    return null;
+                }
+                else {
+                    ctrl.$setValidity('blah', true);
+                    return value;
+                }
+            };
+
+            ctrl.$formatters.push(validator);
+            ctrl.$parsers.push(validator);
         }
     };
+});
+
+app.directive('validDate', function() {
+    return {
+        require: 'ngModel',
+        link: function(scope, ele, attrs, ngModel) {
+            //For DOM -> model validation
+            ngModel.$parsers.unshift(function(value) {
+                if (!value) {
+                    ngModel.$setValidity('date', false);
+                    return null;
+                }
+                var valid = moment(value.replace(/'/g,'').replace(/_/g, ''), 'DD-MM-YYYY', true).isValid();
+                ngModel.$setValidity('date', valid);
+                console.log('parser: ' + value.replace(/''/g,'').replace(/_/g, ''));
+                return valid ? value : null;
+            });
+
+            //For model -> DOM validation
+            ngModel.$formatters.unshift(function(value) {
+                var strippedValue = value.replace(/'/g,'').replace(/_/g, '');
+                ngModel.$setValidity('date', moment(strippedValue, 'DD-MM-YYYY', true).isValid());
+                console.log('formatter: ' + value.replace(/''/g,'').replace(/_/g, ''));
+                return value;
+            });
+        }
+    }
+});
+
+app.directive('listPicker', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'template/listpicker.html',
+        scope: {
+            selectedItems: "="
+        },
+        require: 'ngModel',
+        link: function(scope, ele, attrs, formController) {
+
+            formController.$setValidity('listPicker', true);
+
+            var isRequired = Boolean(scope.$eval(attrs.isRequired));
+
+            scope.add = function(item) {
+                if (item) {
+                    scope.selectedItems.push(item);
+                    if (isRequired) {
+                        formController.$setValidity('listPicker', scope.selectedItems.length !== 0);
+                        formController.$setViewValue(scope.selectedItems);
+                        scope.isDirty = true;
+                    }
+                }
+            };
+
+            scope.remove = function(item) {
+                scope.selectedItems.splice(scope.selectedItems.indexOf(item), 1);
+                formController.$setValidity('listPicker', scope.selectedItems.length !== 0);
+                formController.$setViewValue(scope.selectedItems);
+                scope.isDirty = true;
+            };
+        }
+    }
 });

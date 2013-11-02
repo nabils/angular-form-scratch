@@ -8,10 +8,15 @@
             <label for="lastName">Last Name</label>
             <input type="text" class="form-control" name="lastName" id="lastName" ng-model="form.lastName" ng-class="{ 'dirty': myForm.lastName.$dirty }" required>
         </div>
+        <!--<div class="form-group" ng-class="{ 'has-error': myForm.dob.$invalid }">-->
+            <!--<label for="dob">Date of Birth</label>-->
+            <!--<input type="text" class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>-->
+        <!--</div>-->
         <div class="form-group" ng-class="{ 'has-error': myForm.dob.$invalid }">
             <label for="dob">Date of Birth</label>
-            <input type="text" class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>
+            <input type="text" ui-mask="'99-99-9999'" valid-date class="form-control" name="dob" id="dob" ng-model="form.dateOfBirth" ng-class="{ 'dirty': myForm.dob.$dirty }" required>
         </div>
+
         <div class="form-group" ng-class="{ 'has-error': myForm.nationalities.$invalid }">
             <label for="nationalities">Nationalities</label>
             <select ui-select2 multiple class="form-control" name="nationalities" id="nationalities" ng-model="form.nationalities" ng-class="{ 'dirty': myForm.nationalities.$dirty }" required>
@@ -27,16 +32,11 @@
             </select>
         </div>
 
-        <div class="form-group" ng-class="{ 'has-error': myForm.favoriteColour.$invalid }">
-            <label for="favoriteColour">Favourite Colour</label>
-            <select class="form-control" name="favoriteColour" id="favoriteColour" ng-model="form.favoriteColour" ng-class="{ 'dirty': myForm.favoriteColour.$dirty }" required>
-                <option value=""></option>
-                <option value="Red">Red</option>
-                <option value="Green">Green</option>
-                <option value="Blue">Blue</option>
-                <option value="Orange">Orange</option>
-            </select>
+        <div class="form-group" ng-class="{ 'has-error': myForm.favouriteThings.$invalid }">
+            <label for="favouriteThings">Favourite Things</label>
+            <list-picker name="favouriteThings" id="favouriteThings" ng-model="form.favouriteThings" selected-items="form.favouriteThings" ng-class="{ 'dirty': myForm.favouriteThings.$dirty }" is-required="'true'"></list-picker>
         </div>
+
 
         <button type="submit" ng-disabled="!myForm.$valid" class="btn btn-default pull-right">Submit</button>
     </form>

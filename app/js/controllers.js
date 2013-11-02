@@ -10,7 +10,8 @@ angular.module('myApp.controllers', []).
             lastName: 'Bloggs',
             dateOfBirth: '11-01-1980',
             nationalities: ['British', 'American'],
-            favoriteColour: 'Green'
+            favouriteColour: 'Green',
+            favouriteThings: ['iPhone', 'iPad']
         };
 
   })

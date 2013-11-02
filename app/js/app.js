@@ -3,6 +3,7 @@
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('myApp', [
+        'ui.mask',
         'ui.select2',
         'ngRoute',
         'myApp.filters',

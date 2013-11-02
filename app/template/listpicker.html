@@ -1,0 +1,13 @@
+<div class="list-picker" ng-class="{ 'dirty': isDirty}">
+    <span>
+        <input ng-model="item" />
+        <button ng-click="add(item)">Add</button>
+    </span>
+
+    <li style="list-style: none; margin-top: 10px;" ng-repeat="item in selectedItems">
+        <div class="row">
+            <div class="col-lg-2" ng-bind="item"></div>
+            <button style="text-align: left" class="col-lg-10" ng-click="remove(item)">Remove</button>
+        </div>
+    </li>
+</div>

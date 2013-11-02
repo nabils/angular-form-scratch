@@ -29,6 +29,17 @@
   padding: 0;
 }
 
-input.dirty, select.dirty, .select2-container.dirty {
+input.dirty, select.dirty, .select2-container.dirty, .list-picker.dirty {
     background-color: #fefbed;
+}
+
+.list-picker {
+    padding: 8px;
+}
+
+.has-error .list-picker {
+    background-color: #f2dede;
+    border: 1px #b94a48;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
